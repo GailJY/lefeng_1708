@@ -1,0 +1,225 @@
+[{
+	"id": "001",
+	"agio": "(7.2折)",
+	"imgurl": "../img/l1.jpg",
+	"name": "too cool for schooltoo cool for school鸡蛋洗面奶摩丝洁面泡沫150ml",
+	"price": 78.0,
+	"sale": 108.0
+}, {
+	"id": "002",
+	"agio": "(5.1折)",
+	"imgurl": "../img/l2.jpg",
+	"name": "睿嫣ReEn韩方健康染发剂 亮褐色 20g*6+8ml",
+	"price": 45.0,
+	"sale": 88.0
+}, {
+	"id": "003",
+	"agio": "(6.9折)",
+	"imgurl": "../img/l3.jpg",
+	"name": "伊思毛孔清透洁面乳 150ml",
+	"price": 79.0,
+	"sale": 114.0
+}, {
+	"id": "004",
+	"agio": "(4.2折)",
+	"imgurl": "../img/l4.jpg",
+	"name": "光泽染唇液#2Giddy rosy 4.8ml",
+	"price": 79.0,
+	"sale": 189.0
+}, {
+	"id": "005",
+	"agio": "(5.0折)",
+	"imgurl": "../img/c5.jpg",
+	"name": "睿嫣ReEn润膏虫草养护多效洗发露250ml",
+	"price": 69.0,
+	"sale": 139.0
+}, {
+	"id": "006",
+	"agio": "(5.1折)",
+	"imgurl": "../img/l6.jpg",
+	"name": "岩浆豆洁面34g",
+	"price": 45.0,
+	"sale": 89.0
+}, {
+	"id": "007",
+	"agio": "(7.6折)",
+	"imgurl": "../img/l7.jpg",
+	"name": "植物鲜奶乳-清爽型50ml",
+	"price": 159.0,
+	"sale": 209.0
+}, {
+	"id": "008",
+	"agio": "(5.8折)",
+	"imgurl": "../img/l8.jpg",
+	"name": "too cool for school毛孔隐形膏18g",
+	"price": 109.0,
+	"sale": 189.0
+}, {
+	"id": "009",
+	"agio": "(4.3折)",
+	"imgurl": "../img/l9.jpg",
+	"name": "SNP老虎动物面膜",
+	"price": 98.0,
+	"sale": 229.0
+}, {
+	"id": "010",
+	"agio": "(7.9折)",
+	"imgurl": "../img/l10.jpg",
+	"name": "清爽温和卸妆啫喱 150ml",
+	"price": 85.0,
+	"sale": 108.0
+}, {
+	"id": "011",
+	"agio": "(3.9折)",
+	"imgurl": "../img/l11.jpg",
+	"name": "MILATTE黑熊家族熊猫亮白眼贴",
+	"price": 89.0,
+	"sale": 231.0
+}, {
+	"id": "012",
+	"agio": "(4.5折)",
+	"imgurl": "../img/l12.jpg",
+	"name": "SNP海洋燕窝精华面膜",
+	"price": 99.0,
+	"sale": 219.0
+}, {
+	"id": "013",
+	"agio": "(8.6折)",
+	"imgurl": "../img/l13.jpg",
+	"name": "我的美丽日记纳豆面膜10片",
+	"price": 68,
+	"sale": 79
+}, {
+	"id": "014",
+	"agio": "(5.8折)",
+	"imgurl": "../img/l14.jpg",
+	"name": "Papa recipePAPA RECIPE 春雨蜂蜜面膜套装",
+	"price": 149,
+	"sale": 256
+}, {
+	"id": "015",
+	"agio": "(6.3折)",
+	"imgurl": "../img/l15.jpg",
+	"name": "ON THE BODYON THE BODY米净颜滋润保湿亮白泡沫洗面奶 150g",
+	"price": 59,
+	"sale": 93
+}, {
+	"id": "016",
+	"agio": "(3.9折)",
+	"imgurl": "../img/l16.jpg",
+	"name": "SNPSNP水獭动物面膜",
+	"price": 89,
+	"sale": 220
+}, {
+	"id": "017",
+	"agio": "(8.6折)",
+	"imgurl": "../img/l17.jpg",
+	"name": "我的美丽日记玻尿酸极效保湿面膜10片",
+	"price": 79,
+	"sale": 99
+}, {
+	"id": "018",
+	"agio": "(7.6折)",
+	"imgurl": "../img/l18.jpg",
+	"name": "菲诗小铺绿茶纯净保湿补水喷雾60ml",
+	"price": 52,
+	"sale": 68
+}, {
+	"id": "019",
+	"agio": "(5.3折)",
+	"imgurl": "../img/l19.jpg",
+	"name": "ON THE BODYON THE BODY橄榄油纯净清新沐浴露900g",
+	"price": 69,
+	"sale": 129
+}, {
+	"id": "020",
+	"agio": "(4.5折)",
+	"imgurl": "../img/l20.jpg",
+	"name": "SNPSNP黑珍珠精华面膜",
+	"price": 98,
+	"sale": 210
+}, {
+	"id": "021",
+	"agio": "(6.8折)",
+	"imgurl": "../img/l21.jpg",
+	"name": "菲诗小铺腋下干爽喷雾（无香型）100ml",
+	"price": 46,
+	"sale": 68
+}, {
+	"id": "022",
+	"agio": "(6.9折)",
+	"imgurl": "../img/l22.jpg",
+	"name": "IT°S SKINIT°S SKIN 2PM金装防晒霜",
+	"price": 109,
+	"sale": 159
+}, {
+	"id": "023",
+	"agio": "(4.3折)",
+	"imgurl": "../img/l23.jpg",
+	"name": "SNP熊猫动物面膜25ml*10片",
+	"price": 99,
+	"sale": 229
+}, {
+	"id": "024",
+	"agio": "(5.1折)",
+	"imgurl": "../img/l24.jpg",
+	"name": "ReEn睿嫣韩方健康染发剂自然栗色20g*6+8ml",
+	"price": 45,
+	"sale": 98
+}, {
+	"id": "025",
+	"agio": "(7.3折)",
+	"imgurl": "../img/l25.jpg",
+	"name": "IT°S SKIN能量10精华原液-VC 提亮",
+	"price": 72,
+	"sale": 98
+}, {
+	"id": "026",
+	"agio": "(5.7折)",
+	"imgurl": "../img/l26.jpg",
+	"name": "THE SAEM冰岛保湿乳液140ml",
+	"price": 69,
+	"sale": 120
+}, {
+	"id": "027",
+	"agio": "(5.0折)",
+	"imgurl": "../img/l27.jpg",
+	"name": "近江兄弟社近江兄弟焕活修复浓缩芦荟胶200g",
+	"price": 59,
+	"sale": 119
+}, {
+	"id": "028",
+	"agio": "(6.9折)",
+	"imgurl": "../img/l28.jpg",
+	"name": "It's SkinIT°S SKIN局部护理调理水20ml",
+	"price": 106,
+	"sale": 153
+}, {
+	"id": "029",
+	"agio": "(5.5折)",
+	"imgurl": "../img/l29.jpg",
+	"name": "菊正宗菊正宗清酒高保湿美容精华液 150ml",
+	"price": 149,
+	"sale": 269
+}, {
+	"id": "030",
+	"agio": "(6.0折)",
+	"imgurl": "../img/l30.jpg",
+	"name": "IT°S SKINIT°S SKIN 蜗牛水 清爽型1#",
+	"price": 179,
+	"sale": 208
+}, {
+	"id": "031",
+	"agio": "(5.5折)",
+	"imgurl": "../img/l31.jpg",
+	"name": "ON THE BODY法式优雅天使香水沐浴露900g",
+	"price": 75,
+	"sale": 136
+}, {
+	"id": "002",
+	"agio": "(5.5折)",
+	"imgurl": "../img/l32.jpg",
+	"name": "SNPSNP,绿色舒缓修护提拉面膜",
+	"price": 99,
+	"sale": 179
+}]
