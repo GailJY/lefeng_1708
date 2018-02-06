@@ -1,0 +1,360 @@
+.main1 {
+  width: 1002px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+}
+
+.path {
+  line-height: 60px;
+  color: red;
+  text-indent: 0;
+  font-size: 13px;
+  height: 60px;
+}
+
+.path b, .path a {
+  color: #999;
+  font-size: 13px;
+}
+
+.path i {
+  margin: 0 5px;
+}
+
+.icon {
+  background: url(../img/icon.png) no-repeat;
+  display: inline-block;
+}
+
+.icon-right {
+  background-position: -121px 0;
+  width: 5px;
+  height: 8px;
+}
+
+.com-t-com {
+  width: 1000px;
+  height: 516px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 20px;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+}
+
+.bigpro {
+  width: 1000px;
+}
+
+.bigpro dd {
+  background: #fff;
+  oveflow: hidden;
+}
+
+.bigpro dd h1 {
+  width: 600px;
+  height: 33px;
+  padding: 20px 0 0 29px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  overflow: hidden;
+}
+
+.bigpro dd h1 i {
+  font-weight: normal;
+  color: #f52648;
+}
+
+.bigpro dd p {
+  width: 600px;
+  height: 54px;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0 0 0 29px;
+  color: #999;
+  overflow: hidden;
+}
+
+.bigpro .dity-brand-time {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  text-align: right;
+}
+
+.bigpro .dity-brand-logo {
+  display: inline-block;
+  width: 240px;
+}
+
+.bigpro .dity-brand-logo img {
+  margin: 0 !important;
+  height: 48px;
+  margin-top: 10px !important;
+}
+
+.bigpro dt {
+  position: relative;
+  width: 100px;
+  clear: both;
+}
+
+.bigpro dt .dity-pic {
+  position: relative;
+  height: 347px;
+  width: 600px;
+  border: 1px solid #eee;
+  margin-left: 29px;
+}
+
+.bigpro dt .dity-pic img {
+  display: block;
+  max-width: 600px;
+  max-height: 347px;
+  margin: 0 auto;
+}
+
+.dity-tags {
+  position: relative;
+  left: 0;
+  top: 20px;
+  padding-left: 29px;
+  display: inline-block;
+  width: 500px;
+}
+
+.dity-tags span {
+  height: 22px;
+  padding: 0 10px;
+  line-height: 22px;
+  text-align: center;
+  margin-right: 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+
+.dity {
+  position: absolute;
+  top: 0;
+  left: 660px;
+  width: 310px;
+  height: 380px;
+  border-top: 1px dotted #ccc;
+}
+
+.dity .dity-cont {
+  color: #999;
+}
+
+.dity-price-c {
+  background-position: 0 0;
+  position: relative;
+  height: 55px;
+  margin-top: 20px;
+}
+
+.dity-price-c .lightten {
+  font-size: 12px;
+  color: red;
+}
+
+.dity-price-c strong {
+  font-size: 32px;
+  padding-left: 5px;
+  color: red;
+}
+
+.dity-price-c .dity-countdown {
+  display: inline-block;
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  font-size: 12px;
+  paddin: 1px 3px;
+  margin-left: 10px;
+  vertical-align: super;
+}
+
+.dity-price-c .markPrices-s {
+  color: #999;
+  font-size: 13px;
+  text-decoration: line-through;
+  margin-left: 20px;
+}
+
+dity-title {
+  display: inline-block;
+  width: 70px;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.dity-promotions {
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.dity-title {
+  display: inline-block;
+  width: 70px;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.dity-prts {
+  float: right;
+  width: 240px;
+}
+
+.dity-promotion {
+  height: 27px;
+  line-height: 27px;
+  float: left;
+  width: 100%;
+  font-size: 12px;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+
+.dity-promotion i.l2 {
+  background-position: -39px 0;
+}
+
+.dity-promotion i {
+  display: inline-block;
+  width: 39px;
+  margin: 0 10px 0 5px;
+  vertical-align: middle;
+  font-style: normal;
+  color: #fff;
+  height: 23px;
+  background: url(../img/dw.png) no-repeat;
+}
+
+.dity-sendtime {
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.dity-send-time {
+  font-size: 13px;
+  color: #666;
+}
+
+.dity-size {
+  width: 310px;
+  padding: 25px 0 10px 0;
+  border-top: 1px dotted #ccc;
+}
+
+.dity-size ol li {
+  float: left;
+}
+
+.dity-size-l {
+  width: 60px;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+.dity-size-r {
+  width: 103px;
+  height: 25px;
+  margin-left: 15px;
+  background: url(../img/icon4.png) no-repeat -204px -181px;
+}
+
+.dity-size-r span.dity-m {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  border: none 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.dity-size-r #dity-input {
+  width: 34px;
+  height: 24px;
+  border: 0 none;
+  padding: 0 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.dity-size-r span.dity-p {
+  display: inline-block;
+  border: none 0;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.dity-size-x {
+  color: #f00;
+  line-height: 20px;
+}
+
+.pollen-text {
+  color: #666;
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.pollen-text b {
+  color: red;
+}
+
+.add-to-cart {
+  width: 176px;
+  height: 45px;
+  display: block;
+  background: url(../img/icon4.png) no-repeat -145px 0;
+  overflow: hidden;
+  margin-top: 10px;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.detail-nav {
+  position: relative;
+  z-index: 98;
+  width: 758px;
+  height: 50px;
+  line-height: 50px;
+  background: #f1f1f1;
+  border: 1px solid #e3e3e3;
+}
+
+.detail-nav a.down {
+  background: #fff;
+  color: red;
+  height: 47px;
+  border-top: 4px solid red;
+}
+
+.detail-nav > a {
+  display: block;
+  text-align: center;
+  float: left;
+  padding: 0 40px;
+  font-size: 14px;
+  font-weight: bold;
+  border-right: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+}
+
+.detail-top {
+  width: 728px;
+  padding: 15px 15px 0;
+  border-left: 1px #e3e3e3 solid;
+  border-right: 1px #e3e3e3 solid;
+  overflow: hidden;
+  background: #fff;
+}

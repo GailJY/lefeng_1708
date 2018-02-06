@@ -181,11 +181,13 @@ $(function(){
 
 
 
-      $("#scroll-to-top").click(function() {
-      $("html,body").animate({scrollTop:0}, 500);
-  }); 
-
-
+     
+      console.log($(window).scrollTop())
+ // if($(document).scrollTop()>=200){
+ //        $('#scroll-to-top').css({'display':'block'})
+ //      }else{
+ //        $('#scroll-to-top').css({'display':'none'})
+ //      }
 
 
         $('#pagefooter').load('html/footer.html');
@@ -194,7 +196,9 @@ $(function(){
 
 
 
-
+ $("#scroll-to-top").click(function() {
+      $("html,body").animate({scrollTop:0}, 400);
+  }); 
 
 
 
