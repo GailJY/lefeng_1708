@@ -4,30 +4,25 @@ $(window).scroll(function() {
     //$(window).height()             当前窗口的高度；
     var upprice=false;
     var uppdate=true;
-    if ($(document).scrollTop() >= 0 && $(window).scrollTop()<=4800) {   //判断是否已经滚动到页面底部；
+    if ($(document).scrollTop() >= 200 && $(window).scrollTop()<=4800) {   //判断是否已经滚动到页面底部；
         // $("#loading").css("display", "block"); 
         console.log($(window).scrollTop())         
         $.ajax({                   
-            url: '../api/data/goods3.json',  //请求路径，这里的路径是一个json文件；
+            url: '../api/data/goods3.json', 
             dataType:'json',
-            success: function(data) {        //当请求成功时执行的回调函数；
+            success: function(data) {        
                 var str = ""                                                                                         
-                $.each(data, function(i, item) {       //遍历出来json里边的内容；i，表示当前遍历到第几条内容；item，表示当前遍历的对象；
-                str +="<div data-id='"+item.id+"' class='pruwrap'><dl><dt><a href='#'><img src='"+item.imgurl+
-                "'/></a></dt><dd class='nam'><a href='#'><span>"+item.name+
+                $.each(data.shop, function(i, item) {       
+                str +="<div data-id='"+item.id+"' class='pruwrap'><dl><dt><a href='detail.html?id="+item.id+"'><img src='"+item.imgurl+
+                "'/></a></dt><dd class='nam'><a href='detail.html?id="+item.id+"'><span>"+item.name+
                 "</span></a></dd><dd class='pri'><span class='price-tags'>￥</span><span class='price'>"+item.price+"</span><b>"+item.agio+
-                "</b><del class='spri'>￥"+item.sale+"</del><a class='add-to-cart' href='#'>立即购买</a></dd></dl></div>"
+                "</b><del class='spri'>￥"+item.sale+"</del><a class='add-to-cart' href='car.html'>立即购买</a><button>加入购物车</button></dd></dl></div>"
                 
                 });
                      $(".makeup").append(str);           //把遍历到的内容追击到id为makeup的div中；
                     // $("#loading").css("display", "none");  
-                                $('.p1').on('click',function(){
-                    if(upprice == false){
-                        data.sort(function(a,b){
-                            return a['agio']-b['agio'];
-                        })
-                    }
-                })                                               
+                               
+                                                             
                 }
 
           
@@ -70,26 +65,76 @@ $(window).scroll(function() {
 
    
 
-    // p1.onclick = function(){
-    //     if(upprice == false){
-    //         list.sort(function(a,b){
-    //             return a['sale']-b['sale'];
-    //         })
-    //     }
-    // }
+
 
 
     //点击跳转
     var makeup = document.querySelector('.makeup');
 
-    makeup.onclick = function(e){
-        if(e.target.nodeName.toLowerCase() === 'dl'){
-            let id = e.target.parentNode.dataset.id;
+    // makeup.onclick = function(e){
+    //     if(e.target.nodeName.toLowerCase() === 'img' || e.target.nodeName.toLowerCase() === 'span'){
+    //         let id = e.target.parentNode.parentNode.parentNode.parentNode.dataset.id;
 
-            location.href= '1.html?' + id;
-        }
-        e.preventDefault();
+    //         location.href= 'detail.html?shopid=' + id;
+    //     }
+    //     e.preventDefault();
+    // }
+
+
+
+// 用于保存购物车商品信息
+var carList = [];
+
+
+var cookies = document.cookie.split('; ');
+for(var i=0;i<cookies.length;i++){
+    var arr = cookies[i].split('=');
+    if(arr[0] === 'carList'){
+        carList = JSON.parse(arr[1]);
     }
+}   
+
+makeup.onclick = function(e){
+    e = e || window.event;
+    var target = e.target || e.srcElement;
+    
+    if(target.tagName.toLowerCase() === 'button'){
+
+        var currentLi = target.parentNode.parentNode.parentNode;
+        
+        var children = currentLi.children[0].children;
+        var currentGUID = currentLi.getAttribute('data-id');
+
+        console.log(currentLi)
+        var goodsObj = {};
+        goodsObj.guid = currentGUID;
+        goodsObj.qty = 1;
+        goodsObj.name = children[1].children[0].children[0].innerHTML;
+        goodsObj.price = children[2].children[0].nextSibling.innerHTML;
+        goodsObj.imgUrl = children[0].children[0].children[0].src;
+        console.log(goodsObj.price)
+        if(carList.length===0){
+            carList.push(goodsObj);
+        }else{
+
+            for(var i=0;i<carList.length;i++){
+
+                if(carList[i].guid === currentGUID){
+                    carList[i].qty++;
+                    break;
+                }
+            }
+
+            if(i===carList.length){
+                carList.push(goodsObj);
+            }
+        }
+
+        document.cookie = 'carlist=' + JSON.stringify(carList);
+    }
+}
+
+
 
 
  })

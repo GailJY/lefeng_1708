@@ -1,7 +1,7 @@
 .makeup{position:relative;left:4px; overflow:hidden;clear:both;width:1010px;margin:0 auto;
 	.pruwrap{float:left;margin:8px 8px 0 0;position:relative;background:#fff;border-radius:3px;border:1px solid #fff;transition: border .2s;
 
-		dl{width:242px;height:411px;
+		dl{width:242px;height:430px;
 			.nam{height:36px;overflow:hidden;line-height:18px;padding:0 21px;margin-bottom:5px;a{color:#333;}}
 			.pri{padding-left:21px;margin-top:10px;
 				.price-tags{color:#f52648;font-size:14px;}
@@ -16,7 +16,7 @@
 	}
 
 }
-.add-to-cart{
+.add-to-cart,button{
 	width:96px;height:28px;display:block;background:url(../img/icon.png)no-repeat 0 0;overflow:hidden;margin-top:10px;color:#fff;line-height:27px;text-align:center;
 }
 .add-to-cart.disabled{ background-position:0 -84px; cursor: default;}

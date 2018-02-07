@@ -20,7 +20,7 @@
 
 .makeup .pruwrap dl {
   width: 242px;
-  height: 411px;
+  height: 430px;
 }
 
 .makeup .pruwrap dl .nam {
@@ -78,7 +78,7 @@
   margin-bottom: 10px;
 }
 
-.add-to-cart {
+.add-to-cart, button {
   width: 96px;
   height: 28px;
   display: block;
