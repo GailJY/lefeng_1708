@@ -169,19 +169,19 @@ $(function(){
         /*
             页面加载完毕执行一次查询
         */
-        window.onload = function(){
-            //加载数据
-            loadData(); 
-        };
+        // window.onload = function(){
+        //     //加载数据
+        //     loadData(); 
+        // };
         
-        /*
-            点击加载更多
-        */
-        loadingBtn.click(function(){
-            //是否加载数据
-            if(isLoad)
-                loadData();
-        });
+        // /*
+        //     点击加载更多
+        // */
+        // loadingBtn.click(function(){
+        //     //是否加载数据
+        //     if(isLoad)
+        //         loadData();
+        // });
 
 
 

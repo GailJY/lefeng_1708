@@ -26,7 +26,7 @@ $(window).scroll(function() {
                                                              
                 }
 
-          
+          $('#scroll-to-top').css("display",'block');
 
             });
         }
@@ -133,7 +133,19 @@ makeup.onclick = function(e){
     }
 }
 
+        var scroll_to_top = document.getElementById('scroll-to-top');
+var shopcar = document.getElementsByClassName('shopcar')[0];
+    window.onscroll =function(){
 
+      if(window.scrollY > 1000){
+        scroll_to_top.style.display = 'block';
+        shopcar.style.display = 'block';
+      }
+      else{
+        scroll_to_top.style.display = 'none';
+        shopcar.style.display = 'none';
+      }
+    }
 
 
  })
