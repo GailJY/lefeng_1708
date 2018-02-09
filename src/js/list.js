@@ -7,7 +7,8 @@ $(window).scroll(function() {
     if ($(document).scrollTop() >= 200 && $(window).scrollTop()<=4800) {   //判断是否已经滚动到页面底部；
         // $("#loading").css("display", "block"); 
         console.log($(window).scrollTop())         
-        $.ajax({                   
+        $.ajax({   
+            async:false,                
             url: '../api/data/goods3.json', 
             dataType:'json',
             success: function(data) {        
@@ -61,9 +62,7 @@ $(window).scroll(function() {
     let p3 = document.querySelector('.p3');
     var upprice=false;
     var uppdate=true;
-
-
-   
+    
 
 
 

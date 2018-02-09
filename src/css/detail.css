@@ -32,6 +32,30 @@
   height: 8px;
 }
 
+.sm {
+  max-width: 600px;
+  max-height: 347px;
+  margin: 0 auto;
+}
+
+#big {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  border: 2px solid #ddd;
+  display: none;
+}
+
+#big div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
 .com-t-com {
   width: 1000px;
   height: 516px;
@@ -48,7 +72,7 @@
 
 .bigpro dd {
   background: #fff;
-  oveflow: hidden;
+  overflow: hidden;
 }
 
 .bigpro dd h1 {

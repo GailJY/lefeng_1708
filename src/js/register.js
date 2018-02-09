@@ -144,4 +144,27 @@ $(document).ready(function(){
   			$('.ps1').css({'display':'block'});
   		})
   		
-    });
+
+
+        $('.btnReg').on('click',function(){
+            
+                
+                $.ajax({
+                    url:'../mysql/reg.php',
+                    dataType:'json',
+                    data:{
+                        tel:$('#tel').val(),
+                        password:$('#password').val()
+                    },
+                    success:function(data){
+                        console.log(data);
+                        if(data === 'null'){
+                            location.href = 'login.html';
+                        }else if(data === 'fail'){
+                            $('#tel').css({'color':'red'});
+                        }
+                    }
+        })
+                
+            })
+        })

@@ -80,9 +80,9 @@ $(function(){
 
       //请求数据接口
         var url="./api/data/goods2.json";
-        //渲染数据集合dom
-        var list=$("#list");
-        //加载更多dom
+      
+        var list=$("#content2");
+       
         var loadingBtn=$("#loading");
         //是否需要加载
         var isLoad =true;
@@ -100,6 +100,7 @@ $(function(){
                  url: url,
                  //请求方式
                  type:'POST',
+                 async:false,
                  //参数
                  data: {currentPage:currentPage},
                  //成功回调
@@ -118,11 +119,14 @@ $(function(){
             //当前页自增
             currentPage++;
             //
-            var html = '',result = data.list, len = result.length,i = 0;
+            var html = '',result = data.list, len = result.length;
             //循环数据
-            for(; i<len;i++){
-                var rs = result[i], title = rs.title,id=rs.id,desc = rs.desc;
-            html+='<li data-id="'+id+'" title="'+desc+'">'+title+'</li>';
+            for(i=0;i<len;i++){
+                var rs = result[i], name = rs.name,agio = rs.agio,id=rs.id,price = rs.price,sale = rs.sale,img = rs.imgurl;
+            html+='<div class="pro-list pro-list-" data-id='+id+'><dl><dt class="pro-pic"><a href="html/detail.html?id='+id+'"><img src="'+img+
+                '"/></a></dt><dd class="pro-nam"><a href="detail.html?id='+id+'"><b>'+agio+
+                '</b><span>'+name+
+                '</span></a></dd><dd class="pro-pri"><span class="price-tags">￥</span><span class="price">'+price+'</span><del class="spri">￥'+sale+'</del><a href="car.html"></a><button class="add-to-cart">加入购物车</button></dd></dl></div>';
             }
             //渲染数据
             list.append(html);
@@ -169,7 +173,7 @@ $(function(){
             //加载数据
             loadData(); 
         };
-         loadData();
+        
         /*
             点击加载更多
         */
@@ -182,15 +186,7 @@ $(function(){
 
 
      
-      console.log($(window).scrollTop())
- // if($(document).scrollTop()>=200){
- //        $('#scroll-to-top').css({'display':'block'})
- //      }else{
- //        $('#scroll-to-top').css({'display':'none'})
- //      }
-
-
-        $('#pagefooter').load('html/footer.html');
+      // console.log($(window).scrollTop())
 
 
 
@@ -203,11 +199,40 @@ $(function(){
 
 
 
+
+ var offset = $(".shopcar").offset(); 
+  $("#content2").click('button',function(event){  
+    var addcar = $(this);
+    var img = addcar.parent().parent().find('.pro-pic img').attr('src');
+    var flyer = $('<img class="u-flyer" src="'+img+'">');
+    console.log(img)
+    flyer.fly({
+      start: {
+        left: event.pageX-500,
+        top: event.pageY-500
+      },
+      end: {
+        left: offset.left+30,
+        top: offset.top+30,
+        width: 0,
+        height: 0
+      },
+     
+    });
+  });
+
+
+
+
+
+
+
 });
 
 document.addEventListener('DOMContentLoaded',function(){
 	let content = document.querySelector('#content');
-
+  let main = document.querySelector('.main');
+  console.log(main)
 	var xhr = new XMLHttpRequest();
 
 	xhr.onreadystatechange = function(){
@@ -269,34 +294,34 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
-	let content2 = document.querySelector('#content2');
+	// let content2 = document.querySelector('#content2');
 
-	var xhr_2 = new XMLHttpRequest();
+	// var xhr_2 = new XMLHttpRequest();
 
-	xhr_2.onreadystatechange = function(){
-		if(xhr_2.readyState === 4){
-			var goodslist2 = JSON.parse(xhr_2.responseText).list
-			var div2 = document.createElement('div');
-			div2.className = 'content content-3';
-			div2.innerHTML = goodslist2.map(function(item,idx){
-				return`
-					<div class="pro-list pro-list-" data-id="${item.id}">
-						<dl>
-							<dt class="pro-pic"><a href="#"><img src="${item.imgurl}" alt="" /></a></dt>
-							<dd class="pro-nam"><b>${item.agio}/</b><a href="#">${item.name}</a></dd>
-							<dd class="pro-pri"><span>￥${item.price}</span><b>￥${item.sale}</b><a href="#" class="add-to-cart hide">加入购物车</a></dd>
-						</dl>
-					</div>
-				`
-			}).join('');
+	// xhr_2.onreadystatechange = function(){
+	// 	if(xhr_2.readyState === 4){
+	// 		var goodslist2 = JSON.parse(xhr_2.responseText).list
+	// 		var div2 = document.createElement('div');
+	// 		div2.className = 'content content-3';
+	// 		div2.innerHTML = goodslist2.map(function(item,idx){
+	// 			return`
+	// 				<div class="pro-list pro-list-" data-id="${item.id}">
+	// 					<dl>
+	// 						<dt class="pro-pic"><img src="${item.imgurl}" alt="" /></dt>
+	// 						<dd class="pro-nam"><b>${item.agio}/</b><a href="#">${item.name}</a></dd>
+	// 						<dd class="pro-pri"><span>￥</span><span>${item.price}</span><b>￥${item.sale}</b><button class="add-to-cart1 hide">加入购物车</button></dd>
+	// 					</dl>
+	// 				</div>
+	// 			`
+	// 		}).join('');
 
-			content2.appendChild(div2);
-		}
-	}
+	// 		content2.appendChild(div2);
+	// 	}
+	// }
 
-	xhr_2.open('get','api/data/goods2.json',true);
+	//xhr_2.open('get','api/data/goods2.json',true);
 
-	xhr_2.send();
+	//xhr_2.send();
 
 
 
@@ -306,12 +331,131 @@ document.addEventListener('DOMContentLoaded',function(){
                 let id = e.target.parentNode.parentNode.parentNode.dataset.id;
                
                
-                location.href= '1.html?' + id;
+                location.href= 'html/detail.html?' + id;
 }
 
 
 
             }
+var scroll_to_top = document.getElementById('scroll-to-top');
+var shopcar = document.getElementsByClassName('shopcar')[0];
+    window.onscroll =function(){
+
+      if(window.scrollY > 1000){
+        scroll_to_top.style.display = 'block';
+        shopcar.style.display = 'block';
+      }
+      else{
+        scroll_to_top.style.display = 'none';
+        shopcar.style.display = 'none';
+      }
+    }
+
+carcookie();
+    function carcookie(){
+              // 用于保存购物车商品信息
+
+              var carList = [];
+
+
+              var cookies = document.cookie.split('; ');
+              for(var i=0;i<cookies.length;i++){
+                  var arr = cookies[i].split('=');
+                  if(arr[0] === 'carList'){
+                      carList = JSON.parse(arr[1]);
+                  }
+              }   
+
+              content2.onclick = function(e){
+                  e = e || window.event;
+                  var target = e.target || e.srcElement;
+                  
+                  if(target.tagName.toLowerCase() === 'button'){
+
+                      var currentLi = target.parentNode.parentNode.parentNode;
+                      
+                      var children = currentLi.children[0].children;
+                      var currentGUID = currentLi.getAttribute('data-id');
+
+                      console.log(children)
+                      var goodsObj = {};
+                      goodsObj.guid = currentGUID;
+                      goodsObj.qty = 1;
+                      goodsObj.name = children[1].children[0].children[1].innerHTML;
+                      goodsObj.price = children[2].children[1].innerHTML;
+                      goodsObj.imgUrl = children[0].children[0].children[0].src;
+                      console.log(goodsObj.imgUrl)
+                      if(carList.length===0){
+                          carList.push(goodsObj);
+                      }else{
+
+                          for(var i=0;i<carList.length;i++){
+
+                              if(carList[i].guid === currentGUID){
+                                  carList[i].qty++;
+                                  break;
+                              }
+                          }
+
+                          if(i===carList.length){
+                              carList.push(goodsObj);
+                          }
+                      }
+
+                      document.cookie = 'carlist=' + JSON.stringify(carList);
+                  }
+              }
+            }
+
+
+
+            // main.onclick = e=>{
+            //     if(e.target.tagName.toLowerCase()==='button'){
+            //         // 获取当前所在li
+            //         let currentLi = e.target.parentNode.parentNode;
+                    
+            //         // 1>复制当前商品图片(用于实现动画效果)
+            //         let currentImg = currentLi.children[0].children[0].querySelector('img');console.log(currentImg);
+            //         let copyImg = currentImg.cloneNode();
+
+            //         // 把复制的图片写入页面，并设置样式（定位到当前商品图片所在的位置）
+            //         copyImg.style.position = 'absolute';
+            //         copyImg.style.left = currentImg.offsetLeft + 'px';
+            //         copyImg.style.top = currentImg.offsetTop + 'px';
+            //         copyImg.style.width = currentImg.clientWidth + 'px';
+
+            //         document.body.appendChild(copyImg);
+
+            //         let target = {
+            //             left:shopcar.offsetLeft+shopcar.offsetLeft,
+            //             top:shopcar.offsetTop+shopcar.offsetTop + shopcar.offsetHeight,
+            //             width:10
+            //         }
+            //         animate(copyImg,target,()=>{
+            //             // 2>复制当前商品所有信息(用于往购物车添加)，等飞入动画完成后添加到购物车
+            //             let copyLi = currentLi.cloneNode(true);
+
+            //             // 2)删除购物车中的“添加到购物车”按钮
+
+            //             shopcar.appendChild(copyLi);
+            //             let btnAdd2Car = copyLi.querySelector('button').parentNode;
+            //             copyLi.removeChild(btnAdd2Car);
+
+            //             // 3)在购物车列表中添加移除按钮
+            //             let btnDel = document.createElement('span');
+            //             btnDel.innerHTML = '&times;'
+            //             btnDel.className = 'btn-close';
+            //             copyLi.appendChild(btnDel);
+
+            //             // 删除动画图片
+            //             document.body.removeChild(copyImg);
+            //         });
+
+            //     }
+            // }
+
+
+
 
 
       
